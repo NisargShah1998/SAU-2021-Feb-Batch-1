@@ -1,0 +1,154 @@
+1.
+create database student;
+
+2.
+//Create Tables
+//StudentBasicInformation 
+create table StudentBasicInformation(StudentRollNo VARCHAR(10), StudentName VARCHAR(30), StudentSurname VARCHAR(30), StudentAddress VARCHAR(100), StudentDOB DATE, StudentGender VARCHAR(6), StudentMobileNo VARCHAR(10), PRIMARY KEY(StudentRollNo),UNIQUE KEY(StudentMobileNo));
+
+//StudentAdmissionPaymentDetails
+create table StudentAdmissionPaymentDetails(PaymentId VARCHAR(20),StudentRollNo VARCHAR(10),AmountPaid NUMERIC(20,5),AmountBalance NUMERIC(20,5),AmountPaidDate DATE,PaymentStatus VARCHAR(20),BankName VARCHAR(20),PRIMARY KEY(PaymentId),FOREIGN KEY(StudentRollNo) REFERENCES StudentBasicInformation(StudentRollNo));
+
+//StudentSubjectInformation
+create table StudentSubjectInformation(SubjectOpted VARCHAR(20),StudentRollNo VARCHAR(10),SubjectTotalMarks NUMERIC(5,2),SubjectObtainedMarks NUMERIC(5,2),StudentMarksPercentage NUMERIC(5,2),Grades VARCHAR(5),PRIMARY KEY(SubjectOpted,StudentRollNo),FOREIGN KEY(StudentRollNo) REFERENCES StudentBasicInformation(StudentRollNo));
+
+//SubjectScholarshipInformation
+create table SubjectScholarshipInformation(ScholarshipId VARCHAR(10),StudentRollNo VARCHAR(10),ScholarshipName VARCHAR(20),ScholarshipDescription VARCHAR(50),ScholarshipAmount NUMERIC(10,3), ScholarshipCategory VARCHAR(10),ScholarshipApproval VARCHAR(20),PRIMARY KEY(ScholarshipId),FOREIGN KEY(StudentRollNo) REFERENCES StudentBasicInformation(StudentRollNo));
+
+3.
+//Insert Statements
+//StudentBasicInformation
+Insert INTO StudentBasicInformation Values('1','Nisarg','Shah','B1 Vrajdham Society, Waghodia Road, Vadodara',STR_TO_DATE('1998-03-20', '%Y-%m-%d'),'Male','6354658037');
+Insert INTO StudentBasicInformation Values('2','Manan','Mapara','C10 Devpusp Duplex, Karelibaug, Vadodara',STR_TO_DATE('1997-09-30', '%Y-%m-%d'),'Male','9845684231');
+Insert INTO StudentBasicInformation Values('3','Bhavya','Makwana','5 Rajshree Complex, MG Road, Delhi',STR_TO_DATE('1997-12-01', '%Y-%m-%d'),'Male','8457845321');
+Insert INTO StudentBasicInformation Values('4','Kajal','Parikh', 'C1 Sukhdham Township, Sancoale, Goa',STR_TO_DATE('1996-10-18', '%Y-%m-%d'),'Female','9879874966');
+Insert INTO StudentBasicInformation Values('5','Parth','Modhvadia','A10 Govardhan Society, Gotri, Vadodara',STR_TO_DATE('1997-11-25', '%Y-%m-%d'),'Male','7484967458');
+Insert INTO StudentBasicInformation Values('6','Nirmal','Patel','D125 Chandranagar Society, Waghodia Road, Vadodara',STR_TO_DATE('1997-03-29', '%Y-%m-%d'),'Male','8548567894');
+Insert INTO StudentBasicInformation Values('7','Rachit','Ban','A5 Gokulesh Township, Karelibaug, Vadodara',STR_TO_DATE('1997-05-11', '%Y-%m-%d'),'Male','7383489759');
+Insert INTO StudentBasicInformation Values('8','Priyanka','Vaghela','Phase 2 railakshmi Apartment, Hinjawadi, Pune',STR_TO_DATE('1997-02-14', '%Y-%m-%d'),'Female','7894567894');
+Insert INTO StudentBasicInformation Values('9','Ayushya','Vadhera','15 Gokuldham Society, Kormangala, Bangalore',STR_TO_DATE('1995-10-26', '%Y-%m-%d'),'Male','9876549874');
+Insert INTO StudentBasicInformation Values('10','Haard','Shah','B4 Sakar Complex, Sama Savli, Vadodara',STR_TO_DATE('1997-08-31', '%Y-%m-%d'),'Male','7539518426');
+
+//StudentAdmissionPaymentDetails
+Insert INTO StudentAdmissionPaymentDetails values('1','1',25000,45000,STR_TO_DATE('2021-01-05', '%Y-%m-%d'),'Pending','HDFC');
+Insert INTO StudentAdmissionPaymentDetails values('2','4',35000,12000,STR_TO_DATE('2020-12-10', '%Y-%m-%d'),'Pending','AXIS');
+Insert INTO StudentAdmissionPaymentDetails values('3','6',100000,0,STR_TO_DATE('2021-01-10', '%Y-%m-%d'),'Paid','SBI');
+Insert INTO StudentAdmissionPaymentDetails values('4','8',12000,35461,STR_TO_DATE('2020-12-25', '%Y-%m-%d'),'Pending','HDFC');
+Insert INTO StudentAdmissionPaymentDetails values('5','10',45000,13450,STR_TO_DATE('2020-12-18', '%Y-%m-%d'),'Pending','BOB');
+Insert INTO StudentAdmissionPaymentDetails values('6','2',87500,0,STR_TO_DATE('2021-01-20', '%Y-%m-%d'),'Paid','ICICI');
+Insert INTO StudentAdmissionPaymentDetails values('7','5',1000,70000,STR_TO_DATE('2020-12-12', '%Y-%m-%d'),'Pending','SBI');
+Insert INTO StudentAdmissionPaymentDetails values('8','7',16450,45000,STR_TO_DATE('2020-12-24', '%Y-%m-%d'),'Pending','BOB');
+Insert INTO StudentAdmissionPaymentDetails values('9','9',80000,0,STR_TO_DATE('2021-01-20', '%Y-%m-%d'),'Paid','SBI');
+Insert INTO StudentAdmissionPaymentDetails values('10','3',75000,6000,STR_TO_DATE('2020-12-8', '%Y-%m-%d'),'Pending','HDFC');
+
+//StudentSubjectInformation
+Insert into StudentSubjectInformation values('NLP','1',100,84,NULL,'A-');
+Insert into StudentSubjectInformation values('ASR','2',100,78,NULL,'B+');
+Insert into StudentSubjectInformation values('SPE','3',100,91,NULL,'A');
+Insert into StudentSubjectInformation values('ML','4',100,65,NULL,'B');
+Insert into StudentSubjectInformation values('NLP','5',100,72,NULL,'B+');
+Insert into StudentSubjectInformation values('OS','6',100,75,NULL,'B+');
+Insert into StudentSubjectInformation values('Software Testing','7',100,97,NULL,'A');
+Insert into StudentSubjectInformation values('ASR','8',100,54,NULL,'B-');
+Insert into StudentSubjectInformation values('ML','9',100,40,NULL,'C-');
+Insert into StudentSubjectInformation values('Algorithm','10',100,89,NULL,'A-');
+
+//SubjectScholarshipInformation
+Insert INTO SubjectScholarshipInformation values('1','1','NLP Scholarship','Students Scoring exceptional marks in NLP Subject',10000,NULL,"Approved");
+Insert INTO SubjectScholarshipInformation values('2','4','ML Scholarship','Students Scoring exceptional marks in ML Subject',8000,NULL,"Declined");
+Insert INTO SubjectScholarshipInformation values('3','5','NLP Scholarship','Students Scoring exceptional marks in NLP Subject',10000,NULL,"Declined");
+Insert INTO SubjectScholarshipInformation values('4','2','ASR Scholarship','Students Scoring exceptional marks in ASR Subject',4000,NULL,"Approved");
+Insert INTO SubjectScholarshipInformation values('5','3','SPE Scholarship','Students Scoring exceptional marks in SPE Subject',7000,NULL,"Approved");
+Insert INTO SubjectScholarshipInformation values('6','8','ASR Scholarship','Students Scoring exceptional marks in ASR Subject',4000,NULL,"Declined");
+Insert INTO SubjectScholarshipInformation values('7','10','Algo Scholarship','Students exceptional marks in Algo Subject',9000,NULL,"Approved");
+Insert INTO SubjectScholarshipInformation values('8','6','OS Scholarship','Students Scoring exceptional marks in OS Subject',5000,NULL,"Approved");
+Insert INTO SubjectScholarshipInformation values('9','7','Testing Scholarship','Students exceptional marks in Testing Subject',6000,NULL,"Approved");
+Insert INTO SubjectScholarshipInformation values('10','9','ML Scholarship','Students Scoring exceptional marks in ML Subject',8000,NULL,"Declined");
+
+4.
+select * from StudentBasicInformation;
+select * from StudentAdmissionPaymentDetails;
+select * from StudentScholarshipInformation;
+select * from SubjectScholarshipInformation;
+
+5.
+Update StudentBasicInformation set StudentName = 'Purvang' where StudentRollNo = '10';
+
+Update StudentAdmissionPaymentDetails set AmountPaid = '45000',AmountPaidDate = STR_TO_DATE('2020-12-26', '%Y-%m-%d') where StudentRollNo = '3';
+
+Update StudentSubjectInformation set SubjectOpted = 'GIS' where SubjectOpted LIKE '%TESTING';
+
+Update SubjectScholarshipInformation set ScholarshipName = 'GIS Scholarship', ScholarshipDescription = 'Students exceptional marks in GIS Subject' where ScholarshipName = 'Testing Scholarship';
+
+Update StudentBasicInformation set StudentAddress = '9 Gokuldham Society, Electronic City, Bangalore' where StudentRollNo = '9';
+
+6.
+select * from StudentBasicInformation;
+select * from StudentAdmissionPaymentDetails;
+select * from StudentScholarshipInformation;
+select * from SubjectScholarshipInformation;
+
+
+7.
+select StudentBasicInformation.*,ScholarshipAmount from StudentBasicInformation,SubjectScholarshipInformation where StudentBasicInformation.StudentRollNo = SubjectScholarshipInformation.StudentRollNo and ScholarshipAmount>=5000 and ScholarshipApproval = "Approved";
+
+8.
+select studentbasicinformation.* from studentbasicinformation natural join subjectscholarshipinformation where scholarshipApproval = "Declined";
+
+9.
+create procedure calculate_percentage()
+update studentsubjectinformation set studentmarkspercentage = (subjectobtainedmarks/subjecttotalmarks)*100 where studentmarkspercentage is NULL;
+
+Call calculate_percentage();
+
+10.
+delimiter &&
+create procedure assign_scholarship_category()
+BEGIN
+update subjectscholarshipinformation set scholarshipcategory='Excellent' where studentrollno in (select studentrollno from studentsubjectinformation where studentmarkspercentage>=90 and studentmarkspercentage<=100);
+update subjectscholarshipinformation set scholarshipcategory='Best' where studentrollno in (select studentrollno from studentsubjectinformation where studentmarkspercentage>=80 and studentmarkspercentage<90);
+update subjectscholarshipinformation set scholarshipcategory='Good' where studentrollno in (select studentrollno from studentsubjectinformation where studentmarkspercentage>=75 and studentmarkspercentage<80);
+update subjectscholarshipinformation set scholarshipcategory='Satisfied' where studentrollno in (select studentrollno from studentsubjectinformation where studentmarkspercentage>=0 and studentmarkspercentage<75);
+END&&
+delimiter ;
+
+call assign_scholarship_category();
+
+11.
+create view payment_due as select studentbasicinformation.*,amountbalance from studentbasicinformation natural join studentadmissionpaymentdetails;
+select * from payment_due;
+
+12.
+select s1.* from studentbasicinformation s1 left join subjectscholarshipinformation s2 on s1.studentrollno = s2.studentrollno where scholarshipApproval = "Declined";
+
+13.
+delimiter &&
+create procedure check_balanceamount_by_rollno(rollNo varchar(10)) 
+BEGIN 
+select amountbalance from studentadmissionpaymentdetails where studentrollno = rollNo; 
+END&&
+delimiter ;
+
+call check_balanceamount_by_rollno("5");
+  
+14.
+select * from studentsubjectinformation s1 where 5 > (
+	select count(*) from studentsubjectinformation s2 where s2.studentmarkspercentage > s1.studentmarkspercentage
+)order by studentmarkspercentage desc;
+
+15.
+select StudentBasicInformation.* from StudentBasicInformation INNER JOIN SubjectScholarshipInformation on studentbasicinformation.studentrollno = subjectscholarshipinformation.studentrollno where ScholarshipApproval = "Approved";
+
+select s1.* from studentbasicinformation s1 left join subjectscholarshipinformation s2 on s1.studentrollno = s2.studentrollno where scholarshipApproval = "Declined";
+
+17.
+select scholarshipcategory,count(scholarshipcategory) from subjectscholarshipinformation group by scholarshipcategory order by count(scholarshipcategory) desc;
+
+18.
+select scholarshipcategory,count(scholarshipcategory) as TotalStudents from subjectscholarshipinformation group by scholarshipcategory order by count(scholarshipcategory) desc limit 1;
+
+19.
+select Info.*,subject.studentmarkspercentage,scholarship.scholarshipamount from
+studentbasicinformation info inner join studentsubjectinformation subject inner join subjectscholarshipinformation scholarship on
+info.studentrollno = subject.studentrollno and info.studentrollno = scholarship.studentrollno where scholarshipapproval = "Approved"
+order by scholarship.scholarshipamount desc,subject.studentmarkspercentage desc limit 1;
