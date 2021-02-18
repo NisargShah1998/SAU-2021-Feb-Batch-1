@@ -1,0 +1,17 @@
+Difference between == and ===
+
+== compares only value and not the datatype of both the operands while === compares both value and datatype.
+
+Examples:
+1. '10' == 10 // True
+   '10' === 10 //False
+
+Here L.H.S is string and R.H.S is number but the content is same i.e. 10.So it will return true in ==.
+It will return false in === as datatype is different.
+
+2. 0 == false // True 
+   0 === false // False
+
+Here L.H.S is number and R.H.S is boolean but the content is same i.e. 0.So it will return true in ==.
+It will return false in === as datatype is different.
+
