@@ -1,0 +1,16 @@
+* {
+    margin:auto;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+} 
+
+ table,tr,th,td {
+    background-color:aliceblue;
+    table-layout:fixed;
+    width: 70%;
+    border: 3px black solid;
+    border-collapse: collapse;
+    word-wrap: break-word;
+    font-weight: 500;
+    padding:10px;
+} 
