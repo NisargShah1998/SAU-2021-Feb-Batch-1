@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "725e514d-ea74-4e17-b68b-c606cd05dc76",
+		"name": "BookMyShow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bookmyshow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetAllMovies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookmyshow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 13:46:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"52ec25f9-49c1-48be-bcc4-0e8d237d1b7f\",\n        \"movieName\": \"Raees\",\n        \"cities\": [\n            \"Pune\",\n            \"Delhi\",\n            \"Bangalore\",\n            \"Chennai\",\n            \"Jaipur\"\n        ],\n        \"release_date\": \"20-02-2020\",\n        \"genres\": [\n            \"Drama\",\n            \"Action\"\n        ]\n    },\n    {\n        \"id\": \"97423c5c-0401-4b89-8804-d6a8fedb8326\",\n        \"movieName\": \"Golmaal\",\n        \"cities\": [\n            \"Vadodara\",\n            \"Mumbai\",\n            \"Bangalore\"\n        ],\n        \"release_date\": \"20-02-2021\",\n        \"genres\": [\n            \"Comedy\",\n            \"Action\"\n        ]\n    },\n    {\n        \"id\": \"c88bb105-0910-41ed-b341-83a05e5d66d0\",\n        \"movieName\": \"Bala\",\n        \"cities\": [\n            \"Vadodara\",\n            \"Mumbai\",\n            \"Kolkata\",\n            \"Delhi\"\n        ],\n        \"release_date\": \"10-04-2019\",\n        \"genres\": [\n            \"Comedy\",\n            \"Romantic\"\n        ]\n    },\n    {\n        \"id\": \"d4ef2242-2f7b-4941-bdd2-07898b5610e0\",\n        \"movieName\": \"Badla\",\n        \"cities\": [\n            \"Pune\",\n            \"Hyderabad\",\n            \"Kolkata\",\n            \"Gandhinagar\"\n        ],\n        \"release_date\": \"20-02-2020\",\n        \"genres\": [\n            \"Drama\",\n            \"Suspense\",\n            \"Thriller\"\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GetMovieById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bookmyshow/52ec25f9-49c1-48be-bcc4-0e8d237d1b7f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow",
+						"52ec25f9-49c1-48be-bcc4-0e8d237d1b7f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetMovieById",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookmyshow/52ec25f9-49c1-48be-bcc4-0e8d237d1b7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow",
+								"52ec25f9-49c1-48be-bcc4-0e8d237d1b7f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 13:47:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"52ec25f9-49c1-48be-bcc4-0e8d237d1b7f\",\n    \"movieName\": \"Raees\",\n    \"cities\": [\n        \"Pune\",\n        \"Delhi\",\n        \"Bangalore\",\n        \"Chennai\",\n        \"Jaipur\"\n    ],\n    \"release_date\": \"20-02-2020\",\n    \"genres\": [\n        \"Drama\",\n        \"Action\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "AddMovie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"movieName\": \"Bala\",\r\n        \"cities\": [\r\n            \"Vadodara\",\r\n            \"Mumbai\",\r\n            \"Kolkata\",\r\n            \"Delhi\"\r\n        ],\r\n        \"release_date\": \"10-04-2019\",\r\n        \"genres\": [\r\n            \"Comedy\",\r\n            \"Romantic\"\r\n        ]\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bookmyshow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AddMovie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"movieName\": \"Bala\",\r\n        \"cities\": [\r\n            \"Vadodara\",\r\n            \"Mumbai\",\r\n            \"Kolkata\",\r\n            \"Delhi\"\r\n        ],\r\n        \"release_date\": \"10-04-2019\",\r\n        \"genres\": [\r\n            \"Comedy\",\r\n            \"Romantic\"\r\n        ]\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookmyshow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 13:45:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c88bb105-0910-41ed-b341-83a05e5d66d0\",\n    \"movieName\": \"Bala\",\n    \"cities\": [\n        \"Vadodara\",\n        \"Mumbai\",\n        \"Kolkata\",\n        \"Delhi\"\n    ],\n    \"release_date\": \"10-04-2019\",\n    \"genres\": [\n        \"Comedy\",\n        \"Romantic\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteMovieById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bookmyshow/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DeleteMovieById",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookmyshow/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 13:46:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GetMovieByName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bookmyshow/movie/Bala",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow",
+						"movie",
+						"Bala"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetMovieByName",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookmyshow/movie/Bala",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow",
+								"movie",
+								"Bala"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 13:47:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c88bb105-0910-41ed-b341-83a05e5d66d0\",\n    \"movieName\": \"Bala\",\n    \"cities\": [\n        \"Vadodara\",\n        \"Mumbai\",\n        \"Kolkata\",\n        \"Delhi\"\n    ],\n    \"release_date\": \"10-04-2019\",\n    \"genres\": [\n        \"Comedy\",\n        \"Romantic\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GetMoviesByCityName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/bookmyshow/city/Vadodara",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow",
+						"city",
+						"Vadodara"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetMoviesByCityName",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookmyshow/city/Vadodara",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow",
+								"city",
+								"Vadodara"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 13:47:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"97423c5c-0401-4b89-8804-d6a8fedb8326\",\n        \"movieName\": \"Golmaal\",\n        \"cities\": [\n            \"Vadodara\",\n            \"Mumbai\",\n            \"Bangalore\"\n        ],\n        \"release_date\": \"20-02-2021\",\n        \"genres\": [\n            \"Comedy\",\n            \"Action\"\n        ]\n    },\n    {\n        \"id\": \"c88bb105-0910-41ed-b341-83a05e5d66d0\",\n        \"movieName\": \"Bala\",\n        \"cities\": [\n            \"Vadodara\",\n            \"Mumbai\",\n            \"Kolkata\",\n            \"Delhi\"\n        ],\n        \"release_date\": \"10-04-2019\",\n        \"genres\": [\n            \"Comedy\",\n            \"Romantic\"\n        ]\n    }\n]"
+				}
+			]
+		}
+	]
+}
