@@ -14,8 +14,8 @@ add a search functionality.
 
 ![2nd image](./Screenshots/2.png)
 
-![3rd image](./Screenshots/4.png)
+![3rd image](./Screenshots/3.png)
 
 3. Description of Book after clicking on it
 
-![4th image](./Screenshots/3.png)
+![4th image](./Screenshots/4.png)
