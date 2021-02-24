@@ -5,7 +5,9 @@
     b. (55+9) % 9    
     c. 20 + -3*5 / 8    
     d. 5 + 15 / 3 * 2 - 8 % 3  
-    
+ 
+ **Note: For entering negative numbers add parenthesis with that number for eg: -5 as (-5)**
+ 
 [Source Code](./SlidesQuestions/src/Calculator.java)  
 
 Output:
