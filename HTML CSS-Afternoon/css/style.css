@@ -1,12 +1,10 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-}
-
 /* Add a gray background color and some padding to the footer */
+*{
+  font-family:Century gothic;
+  color: #FEFAEC;
+}
 footer {
-  background-color: #f2f2f2;
+  background-color:#f38181;
   padding: 25px;
 }
 
@@ -15,7 +13,7 @@ footer {
   background-color: transparent;
   width: 300px;
   height: 250px;
-  border: 1px solid #f1f1f1;
+  margin-left: 200px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -45,16 +43,18 @@ footer {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color:#f38181;
+  color:#FEFAEC;
   padding-top: 20%;
+  font-size: 30px;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #bbb;
-  color:black;
+  background-color:#f38181;
   transform: rotateY(180deg);
-  padding-top: 20%;
-
+  padding-top: 30%;
+  font-size: 18px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
